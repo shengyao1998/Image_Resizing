@@ -1,24 +1,24 @@
 # Template Version
-README Template Ver.        : Ver. 1.1
-Last Modified Date          : 28 Oct 2022
+README Template Ver.        : Ver. 1.1 <br>
+Last Modified Date          : 28 Oct 2022 <br>
 
 # Program Name
-Program Name            : Image_Resizing
-Program Version         : Refer to GitHub
+Program Name            : Image_Resizing <br>
+Program Version         : Refer to GitHub <br>
 
 # License
 N/A
 
 # Authors
-Authors             : Yap Sheng Yap
-Co-Authors          : N/A
+Authors             : Yap Sheng Yap <br>
+Co-Authors          : N/A <br>
 Contributor         : Gavin Lim
 
 # Project status
-Project Status          : In Development
-Start Date              : 26 Oct 2022
-Completion Date         : N/A
-Last Modified Date      : 28 Oct 2022
+Project Status          : In Development <br>
+Start Date              : 26 Oct 2022 <br>
+Completion Date         : 28 Oct 2022 <br>
+Last Modified Date      : 28 Oct 2022 <br>
 
 # Roadmap
 ## 1. GUI
