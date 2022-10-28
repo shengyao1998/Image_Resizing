@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 ####################################################################
 #   Input File Handling
 ####################################################################
-img = cv2.imread("Input Files/VsCode Icon.png")
+img = cv2.imread("Input Files/C# Icon.png")
 if img is None:
     sys.exit("Could not found the image, please check the file path again.")
 
@@ -53,7 +53,7 @@ if img_ratio > result_ratio:
     cropped_region = int((img_dimension[1] - new_width)/2)
     cropped_img = img[0:,cropped_region: (img_dimension[1]- cropped_region)]
     # cv2.imshow("Display window2", cropped_img)
-    cv2.imwrite("Output Files/VsCode Icon.png",cropped_img)
+    cv2.imwrite("Output Files/C# Icon.png",cropped_img)
 elif img_ratio < result_ratio:
     new_width = result_ratio * img_dimension[0]
     stich_region = int((new_width - img_dimension[1])/2)
@@ -61,7 +61,7 @@ elif img_ratio < result_ratio:
     stich_img.fill(255)
     combine_image = np.concatenate((stich_img, img, stich_img), axis=1)
     # cv2.imshow("Display window2", combine_image)
-    cv2.imwrite("Output Files/VsCode Icon.png",combine_image)
+    cv2.imwrite("Output Files/C# Icon.png",combine_image)
 
 ####################################################################
 #   Output File Handling
