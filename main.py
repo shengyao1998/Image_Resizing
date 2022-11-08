@@ -18,18 +18,26 @@
 #################
 #   Packages
 #################
-import sys
+import os
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from os import listdir
 
 
 ####################################################################
 #   Input File Handling
 ####################################################################
-img = cv2.imread("Input Files/C# Icon.png")
-if img is None:
-    sys.exit("Could not found the image, please check the file path again.")
+def file_input():
+    folder_dir = "C:\Users\splc2020\Desktop\Project\PC Project\Python_Project\Image_Resizing"
+
+    for images in os.listdir(folder_dir):
+        if (images.endswith(".png") or images.endswith(".jpg") or images.endswith(".jpeg")):
+            img = cv2.imread(images)
+            img_list.append(images)
+            print (img_list)
+        if images == 0:
+            sys.exit("Could not found the image, please check the file path again.")
 
 
 ####################################################################
