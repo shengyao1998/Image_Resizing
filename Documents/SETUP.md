@@ -1,39 +1,16 @@
-# Foobar
-
-Foobar is a Python library for dealing with word pluralization.
+# SETUP Template Version
+DEBUG GUIDE Template Ver.   : Ver. 1.1 <br>
+Last Modified Date          : 8 Nov 2022 <br>
 
 ## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the following Libraries
 ```bash
 pip install foobar
+pip install numpy
+pip install Matploylib
+pip install Testing
+
 ```
 
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-
-
-
-SETUP Template Ver.         : Ver. 1.0
-[MIT](https://choosealicense.com/licenses/mit/)
+## Installation2
+Run the SETUP.bash to install the enn with libs directly.
