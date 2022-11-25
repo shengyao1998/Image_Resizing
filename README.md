@@ -27,7 +27,7 @@ Last Modified Date      : 28 Oct 2022 <br>
 Create a GUI that function to select and view the input, output image.
 
 ## 2. File Handling
-Handle Input and Output File automatically.
+Relative file path to handle input and output file automatically for diff user.
 
 ## 3. Background Colour Matching
 Obtain the background colour and proceed the image with same colour code (Currently only deal with White Background)
@@ -35,16 +35,17 @@ Obtain the background colour and proceed the image with same colour code (Curren
 ## 4. Noise Filtering
 Filter out the noise of the image, ensure having an clear input image
 
-# Project Description
-Image Resizing Program was mainly developed to rescale the pixels, or ratio of an images without scaling the original image quality. This is done by adding an extra image toward the side of the target image, expanding the whole image without interfering the target image. 
+# Project Objective & Description
+### Objectives
+This program was mainly developed to rescale the pixels, or ratio of an image without rescaling the original image quality. 
 
-Another main purpose for this project is to standardized all the documentation template for my all of my upcoming project which include the following items:
+Another main purpose for this project is to test and standardized all the documentation template for all of my future projects. All upcoming program will use the same set of documentation template which include the following files:
 
 1. README.md
 2. SETUP.md
-3. CHANGE_LOG.ipynb
+3. CHANGE_LOG.md
 4. DEBUG_GUIDE.md
-5. BUG_TRACKER.ipynb
+5. BUG_TRACKER.md
 6. ...
 
 # Installation
