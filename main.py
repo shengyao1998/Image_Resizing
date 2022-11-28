@@ -28,54 +28,58 @@ from os import listdir
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-####################################################################
-#   Input File Handling
-####################################################################
+####  Input File Handling
 absolute_path = os.path.dirname(os.path.abspath(__file__))
-relative_path = "Input Files"
+relative_path = "Input Files\\"
 full_path = os.path.join("r", absolute_path, relative_path)
+input_path = full_path.replace('\\', '/')
 
 # print (absolute_path)
 # print (relative_path)
 # print (full_path)
+# print (input_path)
+# img = cv2.imread("Input Files/VsCode Icon.png")
 
-for images in os.listdir(full_path):
+for images in os.listdir(input_path):
     # check if the image ends with png or jpg or jpeg
     if (images.endswith(".png") or images.endswith(".jpg") or images.endswith(".jpeg")):
-        print (full_path)
+        image = cv2.imread(relative_path + images)
+        remove_trans_bit(image)
+
+k = cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 ####################################################################
 #   Replace the Transparent bit with White Bit
 ####################################################################
-# # Create a Mask
-# trans_mask = img[:,:,2] == 0
-
-# #replace areas of transparency with white and not transparent
-# img[trans_mask] = [255, 255, 255]
+def remove_trans_bit(img):
+    # Create a Mask
+    trans_mask = img[:,:,2] == 0
+    #replace areas of transparency with white and not transparent
+    img[trans_mask] = [255, 255, 255]
 
 
 # ####################################################################
 # #   Image Shape Checking and Resizing
 # ####################################################################
-# result_ratio = 10
-# img_dimension = img.shape
-# img_ratio = img_dimension[1]/img_dimension[0]
-# if img_ratio > result_ratio:
-#     new_width = result_ratio * img_dimension[0]
-#     cropped_region = int((img_dimension[1] - new_width)/2)
-#     cropped_img = img[0:,cropped_region: (img_dimension[1]- cropped_region)]
-#     # cv2.imshow("Display window2", cropped_img)
-#     cv2.imwrite("Output Files/C# Icon.png",cropped_img)
-# elif img_ratio < result_ratio:
-#     new_width = result_ratio * img_dimension[0]
-#     stich_region = int((new_width - img_dimension[1])/2)
-#     stich_img = np.zeros([img_dimension[0],stich_region,3],dtype=np.uint8)
-#     stich_img.fill(255)
-#     combine_image = np.concatenate((stich_img, img, stich_img), axis=1)
-#     # cv2.imshow("Display window2", combine_image)
-#     cv2.imwrite("Output Files/C# Icon.png",combine_image)
+result_ratio = 10
+img_dimension = img.shape
+img_ratio = img_dimension[1]/img_dimension[0]
+if img_ratio > result_ratio:
+    new_width = result_ratio * img_dimension[0]
+    cropped_region = int((img_dimension[1] - new_width)/2)
+    cropped_img = img[0:,cropped_region: (img_dimension[1]- cropped_region)]
+    # cv2.imshow("Display window2", cropped_img)
+    cv2.imwrite("Output Files/C# Icon.png",cropped_img)
+elif img_ratio < result_ratio:
+    new_width = result_ratio * img_dimension[0]
+    stich_region = int((new_width - img_dimension[1])/2)
+    stich_img = np.zeros([img_dimension[0],stich_region,3],dtype=np.uint8)
+    stich_img.fill(255)
+    combine_image = np.concatenate((stich_img, img, stich_img), axis=1)
+    # cv2.imshow("Display window2", combine_image)
+    cv2.imwrite("Output Files/C# Icon.png",combine_image)
 
 
 # ####################################################################
