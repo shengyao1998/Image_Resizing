@@ -5,7 +5,7 @@ Remark                      : Please Refer to **Documents** Folder for all the r
 
 # Program Name
 Program Name            : Image_Resizing <br>
-Program Version         : Refer to GitHub <br>
+Program Version         : Ver 1.0 <br>
 
 # License
 N/A
@@ -31,9 +31,6 @@ Relative file path to handle input and output file automatically for diff user.
 
 ## 3. Background Colour Matching
 Obtain the background colour and proceed the image with same colour code (Currently only deal with White Background)
-
-## 4. Noise Filtering
-Filter out the noise of the image, ensure having an clear input image
 
 # Project Objective & Description
 ### Objectives
